@@ -12,6 +12,12 @@ pipeline {
                 sh './PES2UG20CS382-1'
             }
         }
+        stage('Deploy') {
+            steps {
+                echo 'Starting Deploy'
+                echo 'Deploy Completed'
+            }
+        }
     }
     post {
         always {
@@ -19,6 +25,6 @@ pipeline {
         }
         failure {
             echo 'Pipeline failed'
-        }
-    }
+        }
+    }
 }
